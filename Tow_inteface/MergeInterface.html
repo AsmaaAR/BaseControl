@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<link rel="stylesheet" href="merge.css" type="text/css">
+<title>arm and base interface</title>
+</head>
+<body>
+<div class="boxh2">
+<h2 style="color:#ffffff; text-align:center">Control Base</h2></div>
+
+<div class="boxh1">
+<h2 style="text-align:center">Control Arm</h2></div>
+<div class="content">
+<form action="connection.php" method="post" class="slidecontainer">
+
+<div class="slidecontainer">
+   <h3> Motor 1: </h3>
+  <input type="range" min="0" max="180" value="90" class="slider" id="myRange" name="motor1">  
+  <span class="limit" ></span>
+</div>
+
+<div class="slidecontainer">
+   <h3> Motor 2: </h3>
+  <input type="range" min="0" max="180" value="90" class="slider" id="myRange" name="motor2">  
+  <span class="limit" ></span>
+</div>
+
+<div class="slidecontainer">
+   <h3> Motor 3: </h3>
+  <input type="range" min="0" max="180" value="90" class="slider" id="myRange" name="motor3">  
+  <span class="limit" ></span>
+</div>
+  
+<div class="slidecontainer">
+   <h3> Motor 4: </h3>
+  <input type="range" min="0" max="180" value="90" class="slider" id="myRange" name="motor4">  
+  <span class="limit" ></span>
+</div>
+  
+<div class="slidecontainer">
+   <h3> Motor 5: </h3>
+  <input type="range" min="0" max="180" value="0" class="slider" id="myRange" name="motor5">  
+  <span class="limit" ></span>
+</div>
+  
+<div class="slidecontainer">
+     <input style="position: absolute; bottom:40px; right:120px" value="save" type="submit" name="save">
+</div>
+		
+<div class="slidecontainer">
+     <input  style="position: absolute; bottom:40px; right:200px" value="off" type="submit"  name="off">
+</div>
+		
+<div class="slidecontainer">
+     <input  style="position: absolute; bottom:40px; left:60px" value="on" type="submit"  name="on">
+</div> 
+		
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+<script>
+		function updateLabel() {
+		var limit = this.parentElement.getElementsByClassName("limit")[0];
+		limit.innerHTML = this.value;
+		}
+
+		var slideContainers = document.getElementsByClassName("slidecontainer");
+
+		for (var i = 0; i < slideContainers.length; i++) {
+		var slider = slideContainers[i].getElementsByClassName("slider")[0];
+		updateLabel.call(slider);
+		slider.oninput = updateLabel;
+		}
+	</script>
+	</form>
+</div>
+
+<div class="box">
+<form action="btnclick.php" method="post" class="dir">
+<div class="dir">
+<input class="in" style="position: absolute; left:165px; top:60px" type="submit" value="forward" name="forward">
+
+<input class="in" style="position: absolute; left:30px; top:170px" type="submit" value="lift" name="lift">
+
+<input class="in" style="position: absolute; right:30px; top:170px" type="submit" value="right" name="right">
+
+<input class="in" style="position: absolute; left:165px; bottom:60px" type="submit" value="backward" name="backward">
+
+<input class="in" style="position: absolute; left:190px; top:160px; width: 70px;
+  height: 70px;" type="submit" value="stop" name="stop">
+</div>
+</form> 
+</div>
+</body>
+</html>

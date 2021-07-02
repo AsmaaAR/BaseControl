@@ -1,0 +1,129 @@
+@charset "windows-1256";
+
+body{
+	position: relative;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 60%;
+  height: 10px;
+  border-radius: 5px;  
+  background: #c0c0c0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: #ff8040;
+  cursor: pointer;
+  padding: 0;
+}
+
+.content{
+  background: #f7f7f7;
+  height: 400px;
+  width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  position: absolute;
+  left: 120px;
+  top:40px;
+}
+.boxh1{
+  background: #f7f7f7;
+  height: 50px;
+  width: 400px;
+  margin: 20px auto;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  position: absolute;
+  left: 120px;
+ }
+*{
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+input{
+  
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  background: #808080;
+  cursor: pointer;
+  width: 15%;
+  height: 35px; 
+  margin-left: 0px;
+}
+
+.box{
+  background: #000000;
+  height: 400px;
+  width: 450px;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 6px 0 #ff8040;
+  position: absolute;
+  right: 120px;
+  top:40px;
+ }
+ 
+ .boxh2{
+  background: #000000;
+  height: 50px;
+  width: 450px;
+  margin: 20px auto;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 0 5px 6px 0 #ff8040;
+  position: absolute;
+  right: 120px;
+ }
+
+.in{
+  border-radius: 50px;
+  border: 2px solid #ff8040;
+  color: #ffffff;
+  font-size: 25px;
+  background: #000000;
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+}
+
+.in:hover{
+  box-shadow: 0 5px 6px 0 #ff8040 inset, 0 5px 6px 0 #ff8040,
+              0 5px 6px 0 #ff8040 inset, 0 5px 6px 0 #ff8040;
+}
+@media only screen and (max-width: 700px){
+  .content{
+     width: 100%;
+  margin: auto;
+  }
+  .boxh2{
+  background: #000000;
+  height: 50px;
+  width: 450px;
+  margin: 20px auto;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 0 5px 6px 0 #ff8040;
+  position: absolute;
+  top: 120px;
+ }
+  
+}
